@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&display=swap');
+
+*{
+    font-family: 'Nunito Sans', sans-serif;;
+
+}
+
+/*Estilos del encabezado y navegacion*/
+
+header {
+    background-color: rgb(193, 193, 230);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+    padding: 5px 10%;
+
+}
+
+.logo img{
+    height: 200px;
+    width: 200px;
+    transition: all 0.3s;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.navbar-container {
+    display: flex;
+    
+}
+
+
+.navbar-item {
+    list-style-type: none;
+    
+}
+
+.navbar-item a{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 700;
+    color: rgb(35, 83, 126);
+    text-decoration: none;
+    
+    
+
+}
+
+.navbar-item a:hover{
+    transform: scale(1.1);
+    color: blueviolet;
+}
+
+
+
