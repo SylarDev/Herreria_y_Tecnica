@@ -58,5 +58,16 @@ header {
     color: blueviolet;
 }
 
+/*Estilos del footer*/
+footer {
+    background-color: rgb(193, 193, 230);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    padding: 5px 10%;
 
-
+}
+#social-title {
+    text-align: center;
+}
