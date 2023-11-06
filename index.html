@@ -5,46 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herrería y Técnica</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleImages.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="icons/1.png" alt="Logo">
+            <a href="index.html"><img src="icons/1.png" alt="Logo"></a>
         </div>
         <nav class="navbar-container">
-            <li class="navbar-item"><a href="#inicio">Inicio</a></li>
+            <li class="navbar-item"><a href="index.html">Inicio</a></li>
             <li class="navbar-item"><a href="#servicios">Servicios</a></li>
             <li class="navbar-item"><a href="#contacto">Contacto</a></li>
             <li class="navbar-item"><a href="#quienes somos">¿Quienes sómos?</a></li>
         </nav>
     </header>
+    <div class="container">
 
+        <div class="img-container">
+            <div class="mySlides">
+                <img src="img/20211020_161216.jpg">
+            </div>
+    
+            <div class="mySlides">
+                <img src="img/20211220_110447.jpg">
+            </div>
+    
+            <div class="mySlides">
+                <img src="img/puerta_interior_doble.jpg">
+            </div>
+    
+            <div class="mySlides">
+                <img src="img/dobleCerrada.jpg" >
+            </div>
+    
+            <div class="mySlides">
+                <img src="img/20211220_110459.jpg">
+            </div>
+    
+    
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="img/20211020_161216.jpg" onclick="currentSlide(1)"
+                    alt="Granero">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/20211220_110447.jpg" onclick="currentSlide(2)"
+                    alt="Granero">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/puerta_interior_doble.jpg" onclick="currentSlide(3)"
+                    alt="Doble hoja">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/dobleCerrada.jpg" onclick="currentSlide(4)"
+                    alt="Doble hoja">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="img/20211220_110459.jpg" onclick="currentSlide(5)"
+                    alt="Granero">
+            </div>
+
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
-            <h5><p id="social-title">Social:</p></h5>
-       
-        <div class="social">
-            <div class="social-icons">
-                <a href="https://www.instagram.com/herreriaytecnica/"><img src="icons/instagram.png" alt="Instagram"></a>
-                <img src="icons/telegram.png" alt="Telegram">
-                <a aria-label="Chat on WhatsApp" href="https://wa.me/1144187544"><img alt="Chat on WhatsApp" src="icons/whatsapp.png" /><a />
+            <h5>
+                <p id="social-title">Social:</p>
+            </h5>
+
+            <div class="social">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/herreriaytecnica/"><img src="icons/instagram.png" alt="Instagram"></a>
+                    <img src="icons/telegram.png" alt="Telegram">
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/1144187544"><img alt="Chat on WhatsApp" src="icons/whatsapp.png" /><a />
+                </div>
             </div>
-        </div>
-        <hr>
-        <div class="copyright">
-            <h5>Todos los derechos reservados &copy;</h5>
-        </div>
-        <div class="dev">
-            <h6>Desarrollado por <a href="https://github.com/SylarDev">SylarDev</a></h6>
-        </div>
-        <hr>
+            <hr>
+            <div class="copyright">
+                <h5>Todos los derechos reservados &copy;</h5>
+            </div>
+            <div class="dev">
+                <h6>Desarrollado por <a href="https://github.com/SylarDev">SylarDev</a></h6>
+            </div>
+            <hr>
         </div>
     </footer>
+    <script src="slide.js"></script>
 </body>
 
 </html>
