@@ -20,6 +20,7 @@ header {
   height: 200px;
   width: 200px;
   transition: all 0.3s;
+  border-radius: 10px;
 }
 
 .logo img:hover {
@@ -28,6 +29,7 @@ header {
 
 .logo {
   cursor: pointer;
+  
 }
 
 .navbar-container {
@@ -49,7 +51,6 @@ header {
 .navbar-item a:hover {
   transform: scale(1.1);
   transition: all 0.3s;
-
   color: blueviolet;
 }
 

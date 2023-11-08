@@ -20,6 +20,7 @@
 .mySlides img {
     width: 500px;
     height: 500px;
+    border-radius: 20px;
 }
 
 .cursor {
@@ -28,13 +29,14 @@
 
 .prev,
 .next {
+  text-decoration: none;
   cursor: pointer;
   position: absolute;
   top: 40%;
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: rgb(34, 143, 85);
+  color: rgb(83, 74, 95);
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -45,21 +47,26 @@
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  
 }
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.5);
+  transition: all 0.3s;
 }
 
 .caption-container {
   text-align: center;
   background-color: rgb(193, 193, 230);
-  padding: 2px 16px;
-  color: blanco;
+  
 }
 
+#caption {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
 .row:after {
   content: "";
   display: table;
@@ -69,6 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5px;
     
 }
 .demo,
@@ -84,6 +92,7 @@
 
 .demo {
   opacity: 0.6;
+  border-radius: 5px;
 }
 
 .active,
