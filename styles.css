@@ -71,3 +71,30 @@ footer {
   transform: scale(1.2);
   transition: all 0.3s;
 }
+
+/*estilos de Nuestros servicios*/
+#ns {
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 50px;
+}
+.door-services {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: start;
+  gap: 20px; 
+  margin-top: 50px;
+}
+.door-services p {
+  margin: 0;
+  margin-left: 400px;
+  margin-top: 20px;
+}
+
+
+.door-services img {
+  width: 400px;
+  height: 500px;
+  border-radius: 5px;
+  margin-right: 500px;
+}
