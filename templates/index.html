@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herrería y Técnica</title>
-    
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styleImages.css') }}">
-    
+
+
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="{{url_for('static', filename='icons/1.png')}}" alt="Logo"></a>
+            <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='icons/1.png')}}" alt="Logo"></a>
         </div>
         <nav class="navbar-container">
-            <li class="navbar-item"><a href="index.html">Inicio</a></li>
+            <li class="navbar-item"><a href="{{url_for('index')}}">Inicio</a></li>
             <li class="navbar-item"><a href="#servicios">Servicios</a></li>
             <li class="navbar-item"><a href="#contacto">Contacto</a></li>
             <li class="navbar-item"><a href="#quienes somos">¿Quienes sómos?</a></li>
+            <li class="navbar-item"><a href="{{ url_for('productos') }}">Productos</a></li>
         </nav>
     </header>
 
@@ -58,19 +58,24 @@
 
         <div class="row">
             <div class="column">
-                <img class="demo cursor" src="{{ url_for('static', filename='img/20211020_161216.jpg') }}" onclick="currentSlide(1)" alt="Puerta granero">
+                <img class="demo cursor" src="{{ url_for('static', filename='img/20211020_161216.jpg') }}"
+                    onclick="currentSlide(1)" alt="Puerta granero">
             </div>
             <div class="column">
-                <img class="demo cursor" src="{{ url_for('static', filename='img/20211220_110447.jpg') }}" onclick="currentSlide(2)" alt="Puerta granero">
+                <img class="demo cursor" src="{{ url_for('static', filename='img/20211220_110447.jpg') }}"
+                    onclick="currentSlide(2)" alt="Puerta granero">
             </div>
             <div class="column">
-                <img class="demo cursor" src="{{ url_for('static', filename='img/puerta_interior_doble.jpg') }}" onclick="currentSlide(3)" alt="Puerta doble hoja">
+                <img class="demo cursor" src="{{ url_for('static', filename='img/puerta_interior_doble.jpg') }}"
+                    onclick="currentSlide(3)" alt="Puerta doble hoja">
             </div>
             <div class="column">
-                <img class="demo cursor" src="{{ url_for('static', filename='img/dobleCerrada.jpg') }}" onclick="currentSlide(4)" alt="Puerta doble hoja">
+                <img class="demo cursor" src="{{ url_for('static', filename='img/dobleCerrada.jpg') }}"
+                    onclick="currentSlide(4)" alt="Puerta doble hoja">
             </div>
             <div class="column">
-                <img class="demo cursor" src="{{ url_for('static', filename='img/20211220_110459.jpg') }}" onclick="currentSlide(5)" alt="Puerta granero">
+                <img class="demo cursor" src="{{ url_for('static', filename='img/20211220_110459.jpg') }}"
+                    onclick="currentSlide(5)" alt="Puerta granero">
             </div>
 
         </div>
@@ -93,30 +98,30 @@
                     único.
                 </p>
             </div>
-            
+
             <img src="{{ url_for('static', filename='img/graneroBlack.jpg') }}" alt="Puerta granero">
         </div>
 
     </div>
 
     <div class="services-container">
-        
+
         <div class="door-services">
             <div class="pServices">
                 <h3 id="product-title">Divisiones interiores</h3>
-                <p>Vidrio Repartido Armonioso: La incorporación de vidrio repartido 
-                    añade un toque de transparencia y luminosidad a su espacio. 
-                    La cuidadosa disposición de los paneles de vidrio resalta la belleza del diseño, creando una 
+                <p>Vidrio Repartido Armonioso: La incorporación de vidrio repartido
+                    añade un toque de transparencia y luminosidad a su espacio.
+                    La cuidadosa disposición de los paneles de vidrio resalta la belleza del diseño, creando una
                     fusión armoniosa entre la fortaleza del hierro y la delicadeza de la transparencia.
                     Transforme su Espacio Interior:
-                    Experimente la versatilidad y el encanto de nuestras divisiones interiores, 
-                    diseñadas para dividir espacios con gracia y proporcionar una sensación de apertura. 
-                    Ya sea para separar ambientes en su sala de estar, crear un rincón de estudio inspirador o 
-                    embellecer cualquier espacio, nuestras creaciones son la elección perfecta para aquellos que 
+                    Experimente la versatilidad y el encanto de nuestras divisiones interiores,
+                    diseñadas para dividir espacios con gracia y proporcionar una sensación de apertura.
+                    Ya sea para separar ambientes en su sala de estar, crear un rincón de estudio inspirador o
+                    embellecer cualquier espacio, nuestras creaciones son la elección perfecta para aquellos que
                     buscan una estética refinada y una funcionalidad impecable.
                 </p>
             </div>
-            
+
             <img src="{{ url_for('static', filename='img/divisionbca1.jpg') }}" alt="Division con vidrio">
         </div>
 
@@ -130,9 +135,11 @@
 
             <div class="social">
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/herreriaytecnica/"><img src="{{ url_for('static', filename='icons/instagram.png') }}" alt="Instagram"></a>
+                    <a href="https://www.instagram.com/herreriaytecnica/"><img
+                            src="{{ url_for('static', filename='icons/instagram.png') }}" alt="Instagram"></a>
                     <img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Telegram">
-                    <a aria-label="Chat on WhatsApp" href="https://wa.me/1144187544"><img alt="Chat on WhatsApp" src="{{ url_for('static', filename='icons/whatsapp.png') }}" /><a />
+                    <a aria-label="Chat on WhatsApp" href="https://wa.me/1144187544"><img alt="Chat on WhatsApp"
+                            src="{{ url_for('static', filename='icons/whatsapp.png') }}" /><a />
                 </div>
             </div>
             <hr>
@@ -146,7 +153,7 @@
         </div>
     </footer>
     <script src="{{ url_for('static', filename='slide.js') }}"></script>
-    
+
 </body>
 
 </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Administración de Productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+</head>
+
+<body>
+    <h1>Interfaz de Administración de Productos</h1>
+
+    <!-- Formulario para agregar un nuevo producto -->
+    <h2>Agregar Producto</h2>
+    <form action="/productos" method="POST" enctype="multipart/form-data">
+        <label for="codigo">Código:</label>
+        <input type="text" name="codigo" required>
+        <br>
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" required>
+        <br>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" name="cantidad" required>
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" required>
+        <br>
+        <label for="proveedor">Proveedor:</label>
+        <input type="text" name="proveedor" required>
+        <br>
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen" accept="image/*">
+        <br>
+        <button type="submit">Agregar Producto</button>
+    </form>
+
+    <!-- Formulario para modificar un producto existente -->
+    <h2>Modificar Producto</h2>
+    <form action="/productos" method="PUT" enctype="multipart/form-data">
+        <label for="codigo_modificar">Código del Producto a Modificar:</label>
+        <input type="text" name="codigo_modificar" required>
+        <br>
+        <label for="nueva_descripcion">Nueva Descripción:</label>
+        <input type="text" name="nueva_descripcion" required>
+        <br>
+        <label for="nueva_cantidad">Nueva Cantidad:</label>
+        <input type="number" name="nueva_cantidad" required>
+        <br>
+        <label for="nuevo_precio">Nuevo Precio:</label>
+        <input type="text" name="nuevo_precio" required>
+        <br>
+        <label for="nuevo_proveedor">Nuevo Proveedor:</label>
+        <input type="text" name="nuevo_proveedor" required>
+        <br>
+        <label for="nueva_imagen">Nueva Imagen:</label>
+        <input type="file" name="nueva_imagen" accept="image/*" >
+        <br>
+        <button type="submit">Modificar Producto</button>
+    </form>
+
+    <!-- Formulario para eliminar un producto -->
+    <h2>Eliminar Producto</h2>
+    <form action="/productos" method="DELETE">
+        <label for="codigo_eliminar">Código del Producto a Eliminar:</label>
+        <input type="text" name="codigo_eliminar" required>
+        <br>
+        <button type="submit">Eliminar Producto</button>
+    </form>
+</body>
+
+</html>
