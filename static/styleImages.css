@@ -79,6 +79,13 @@
     padding-top: 5px;
     
 }
+
+.column{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
 .demo,
 .cursor {
     width: 50px;

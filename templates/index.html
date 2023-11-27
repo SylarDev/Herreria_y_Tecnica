@@ -24,6 +24,7 @@
             <li class="navbar-item"><a href="#quienes somos">¿Quienes sómos?</a></li>
         </nav>
     </header>
+
     <div class="container">
 
         <div class="img-container">
@@ -78,7 +79,7 @@
         <p id="ns">Nuestros servicios</p>
         <div class="door-services">
             <div class="pServices">
-                <h3 id="gra-title">Puertas granero</h3>
+                <h3 id="product-title">Puertas granero</h3>
                 <p>Nos especializamos en crear puertas a medida que se adaptan a sus
                     necesidades y preferencias individuales.
                     Nuestra variada selección abarca una amplia gama de
@@ -98,6 +99,29 @@
 
     </div>
 
+    <div class="services-container">
+        
+        <div class="door-services">
+            <div class="pServices">
+                <h3 id="product-title">Divisiones interiores</h3>
+                <p>Vidrio Repartido Armonioso: La incorporación de vidrio repartido 
+                    añade un toque de transparencia y luminosidad a su espacio. 
+                    La cuidadosa disposición de los paneles de vidrio resalta la belleza del diseño, creando una 
+                    fusión armoniosa entre la fortaleza del hierro y la delicadeza de la transparencia.
+                    Transforme su Espacio Interior:
+                    Experimente la versatilidad y el encanto de nuestras divisiones interiores, 
+                    diseñadas para dividir espacios con gracia y proporcionar una sensación de apertura. 
+                    Ya sea para separar ambientes en su sala de estar, crear un rincón de estudio inspirador o 
+                    embellecer cualquier espacio, nuestras creaciones son la elección perfecta para aquellos que 
+                    buscan una estética refinada y una funcionalidad impecable.
+                </p>
+            </div>
+            
+            <img src="{{ url_for('static', filename='img/divisionbca1.jpg') }}" alt="Division con vidrio">
+        </div>
+
+    </div>
+
     <footer>
         <div class="footer-container">
             <h5>
@@ -107,8 +131,7 @@
             <div class="social">
                 <div class="social-icons">
                     <a href="https://www.instagram.com/herreriaytecnica/"><img src="{{ url_for('static', filename='icons/instagram.png') }}" alt="Instagram"></a>
-                     <img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Puerta granero">
-                    
+                    <img src="{{ url_for('static', filename='icons/telegram.png') }}" alt="Telegram">
                     <a aria-label="Chat on WhatsApp" href="https://wa.me/1144187544"><img alt="Chat on WhatsApp" src="{{ url_for('static', filename='icons/whatsapp.png') }}" /><a />
                 </div>
             </div>
