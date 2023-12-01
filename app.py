@@ -183,47 +183,38 @@ def agregar_producto():
         return jsonify({"mensaje": "Producto ya existe"}), 400
 
 #--------------------------------------------------------------------
-@app.route("/modificar_producto", methods=["PUT"])
+@app.route('/modificar_producto', methods=['POST'])
 def modificar_producto():
-    try:
-        
-        codigo = request.form.get('codigo_modificar')
-        print(codigo)
-        nueva_descripcion = request.form.get('nueva_descripcion')
-        nueva_cantidad = request.form.get('nueva_cantidad')
-        nuevo_precio = request.form.get('nuevo_precio')
-        nuevo_proveedor = request.form.get('nuevo_proveedor')
+    codigo = request.form.get('codigo_modificar')
+    nueva_descripcion = request.form.get('nueva_descripcion')
+    nueva_cantidad = request.form.get('nueva_cantidad')
+    nuevo_precio = request.form.get('nuevo_precio')
+    nuevo_proveedor = request.form.get('nuevo_proveedor')
 
-        # Validar los datos de entrada
-        if not codigo or not nueva_cantidad or not nuevo_precio or not nuevo_proveedor:
-            return jsonify({"mensaje": "Datos de entrada incompletos"}), 400
-
-        
-
-        if catalogo.modificar_producto(codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nuevo_proveedor):
-            return jsonify({"mensaje": "Producto modificado"}), 200
-        else:
-            return jsonify({"mensaje": "Producto no encontrado"}), 404
-    except mysql.connector.Error as err:
-        print(f"Error de MySQL: {err}")
-        return jsonify({"mensaje": "Error de MySQL"}), 500
-    except Exception as e:
-        print(f"Error interno: {e}")
-        return jsonify({"mensaje": f"Error interno: {str(e)}"}), 500
-
+    if catalogo.consultar_producto(codigo):
+         if catalogo.modificar_producto(codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nuevo_proveedor):
+             
+            return jsonify({'mensaje': 'producto modificado'}), 201
+       
+    else:
+        return jsonify({'mensaje': 'producto no modificado'}),400
+       
+     
 #--------------------------------------------------------------------
 
 @app.route('/borrar_producto', methods=['POST'])
 def borrar_producto():
     codigo = request.form.get('codigo_eliminar')
-
     if codigo:
-        catalogo.eliminar_producto(codigo)
-        return jsonify({"mensaje": "Producto eliminado"}), 200
-    else:
-        return jsonify({"mensaje": "Producto no encontrado"}), 404
+        producto_existente = catalogo.consultar_producto(codigo)
 
-    #jsonify({"mensaje": "Error al eliminar el producto"}), 404
+        if producto_existente:
+            catalogo.eliminar_producto(codigo)
+            return jsonify({"mensaje": "Producto eliminado"}), 200
+        else:
+            return jsonify({"mensaje": "Producto no encontrado"}), 404
+    else:
+        return jsonify({"mensaje": "Código no proporcionado"}), 400
    
 #--------------------------------------------------------------------
 
