@@ -213,12 +213,12 @@ def modificar_producto():
 
 #--------------------------------------------------------------------
 
-@app.route('/borrar_producto', methods=['DELETE'])
+@app.route('/borrar_producto', methods=['POST'])
 def borrar_producto():
     codigo = request.form.get('codigo_eliminar')
 
     if codigo:
-        catalogo.borrar_producto(codigo)
+        catalogo.eliminar_producto(codigo)
         return jsonify({"mensaje": "Producto eliminado"}), 200
     else:
         return jsonify({"mensaje": "Producto no encontrado"}), 404
