@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+    <title>Borrar producto.</title>
+</head>
+<body>
+     <!-- Formulario para eliminar un producto -->
+     <h2>Eliminar Producto</h2>
+     <form action="/borra_producto/{{codigo}}" method="POST">
+         <label for="codigo_eliminar">Código del Producto a Eliminar:</label>
+         <input type="text" name="codigo_eliminar" required>
+         <br>
+         <button type="submit">Eliminar Producto</button>
+     </form>
+</body>
+</html>

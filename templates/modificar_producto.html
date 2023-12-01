@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+    <title>Modificar producto.</title>
+</head>
+<body>
+    <!-- Formulario para modificar un producto existente -->
+    <h2>Modificar Producto</h2>
+    <form action="/modificar_producto" method="PUT" enctype="multipart/form-data">
+        <label for="codigo_modificar">Código del Producto a Modificar:</label>
+        <input type="number" name="codigo_modificar" required>
+        <br>
+        <label for="nueva_descripcion">Nueva Descripción:</label>
+        <input type="text" name="nueva_descripcion" required>
+        <br>
+        <label for="nueva_cantidad">Nueva Cantidad:</label>
+        <input type="text" name="nueva_cantidad" required>
+        <br>
+        <label for="nuevo_precio">Nuevo Precio:</label>
+        <input type="text" name="nuevo_precio" required>
+        <br>
+        <label for="nuevo_proveedor">Nuevo Proveedor:</label>
+        <input type="text" name="nuevo_proveedor" required>
+        <br>
+        
+        <button type="submit">Modificar Producto</button>
+    </form>
+
+</body>
+</html>
