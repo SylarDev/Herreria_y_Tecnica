@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Herrería y Técnica ofrece servicios de diseño y fabricación de puertas a medida. Transformamos su hogar con puertas personalizadas, ya sea clásicas, modernas o rústicas. También especializados en divisiones interiores con vidrio repartido armonioso. Descubra cómo nuestras creaciones pueden mejorar su espacio interior con elegancia y funcionalidad. ¡Contáctenos para obtener más información!">
+    <meta name="keywords"
+        content="herrería, técnica, puertas a medida, diseño, fabricación, puertas personalizadas, divisiones interiores, vidrio repartido, elegancia, funcionalidad">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SylarDev">
+
     <title>Herrería y Técnica</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styleImages.css') }}">
@@ -17,10 +24,10 @@
             <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='icons/1.png')}}" alt="Logo"></a>
         </div>
         <nav class="navbar-container">
-            <li class="navbar-item"><a href="{{url_for('index')}}">Inicio</a></li>
-            <li class="navbar-item"><a href="{{ url_for('agregar_producto') }}">Agregar productos</a></li>
-            <li class="navbar-item"><a href="{{ url_for('modificar_producto') }}">Modificar productos</a></li>
-            <li class="navbar-item"><a href="{{ url_for('borrar_producto') }}">Borrar productos</a></li>
+            <li class="navbar-item"><a href="#">Inicio</a></li>
+            <li class="navbar-item"><a href="#hrSup">Servicios</a></li>
+            <li class="navbar-item"><a href="#quienes-somos">Quienes sómos</a></li>
+            <li class="navbar-item"><a href="#contacto">Contacto</a></li>
         </nav>
     </header>
 
@@ -79,8 +86,10 @@
 
         </div>
     </div>
+    <hr id="hrSup">
+    <p id="servicios" class="ns">Nuestros servicios</p>
     <div class="services-container">
-        <p id="ns">Nuestros servicios</p>
+        
         <div class="door-services">
             <div class="pServices">
                 <h3 id="product-title">Puertas granero</h3>
@@ -102,7 +111,9 @@
         </div>
 
     </div>
-
+    <div class="hrGlobal">
+        <hr id="hrBaj">
+    </div>
     <div class="services-container">
 
         <div class="door-services">
@@ -125,7 +136,57 @@
         </div>
 
     </div>
+    <div class="hrGlobal">
+        <hr id="hrBaj">
+    </div>
+    <div class="services-container">
 
+        <div class="door-services">
+            <div class="pServices">
+                <h3 id="product-title">Puertas reja</h3>
+                <p>
+                    Nuestras puertas reja de seguridad son la opción perfecta para aquellos que buscan
+                    combinar funcionalidad robusta con un diseño estético atractivo. Diseñadas con precisión y
+                    fabricadas con los más altos estándares de calidad, estas puertas no solo ofrecen una
+                    barrera impenetrable contra intrusiones no deseadas, sino que también añaden un toque de elegancia a
+                    cualquier propiedad.
+                </p>
+            </div>
+
+            <img src="{{ url_for('static', filename='img/puerta-reja.jpg') }}" alt="Puerta reja" >
+        </div>
+
+    </div>
+    <div class="hrGlobal">
+        <hr id="hrBaj">
+    </div>
+    <div class="who-container">
+
+        <div id="quienes-somos">
+            <div class="quienes-somos">
+                <h3>Quienes sómos?</h3>
+                <p>
+                    En Herrería y Técnica, nos enorgullece ser líderes en la industria de la herrería,
+                    ofreciendo soluciones de seguridad incomparables con un toque de distinción.
+                    Con una experiencia consolidada a lo largo de 10 años, hemos cultivado una reputación
+                    sólida gracias a nuestro compromiso inquebrantable con la excelencia en cada proyecto que
+                    emprendemos.
+                    A medida que miramos hacia el futuro, mantenemos nuestro compromiso de ser líderes en innovación y
+                    sostenibilidad en la industria de la herrería. Buscamos constantemente nuevas formas de mejorar y
+                    expandir nuestros servicios, incorporando tecnologías emergentes y prácticas sostenibles para
+                    garantizar que nuestras operaciones sigan siendo tan vanguardistas como nuestros diseños.
+                    Únete a nosotros en el viaje hacia la seguridad y la elegancia. En Herreria y Técnica, no solo
+                    construimos tus diseños, creamos experiencias que resisten la prueba del tiempo.
+                    Estamos emocionados por la oportunidad de trabajar contigo y hacer realidad tus
+                    visiones de seguridad y estilo. ¡Bienvenido a la familia Herrería y Técnica!
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+    
     <footer>
         <div class="footer-container">
             <h5>
@@ -146,7 +207,7 @@
                 <h5>Todos los derechos reservados &copy;</h5>
             </div>
             <div class="dev">
-                <h6>Desarrollado por <a href="https://github.com/SylarDev">SylarDev</a></h6>
+                <h6>Desarrollado por <a href="https://www.instagram.com/sylardev/">SylarDev</a></h6>
             </div>
             <hr>
         </div>

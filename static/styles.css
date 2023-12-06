@@ -3,7 +3,11 @@
 * {
   font-family: "Nunito Sans", sans-serif;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color:blueviolet;
+}
 /*Estilos del encabezado y navegacion*/
 
 header {
@@ -11,14 +15,14 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 250px;
+  margin-top: 10px;
   padding: 5px 10%;
   font-size: x-large;
 }
 
 .logo img {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   transition: all 0.3s;
   border-radius: 10px;
 }
@@ -54,37 +58,92 @@ header {
   color: blueviolet;
 }
 /*estilos de Nuestros servicios*/
-#ns {
+.ns {
   text-align: center;
   font-weight: bolder;
   margin-top: 50px;
   font-size: xx-large;
 }
-.door-services {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  align-items: start;
-  gap: 20px; 
-  margin-top: 50px;
-  font-size: x-large;
+.services-container{
+  display: flex;
+  justify-content: center;
   
 }
+.door-services {
+  background-image: url(img/fondoCss.png);
+  display: flex;
+  flex-direction:row; 
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 5px;
+  font-size: x-large;
+  width: 1000px;
+  border-radius: 5px;
+}
+
 #product-title {
   text-align: center;
   
 }
 .door-services p {
   margin: 0;
-  margin-left: 400px;
+  margin-left: 100px;
   margin-top: 20px;
+  width: 500px;
 }
 
 
 .door-services img {
-  width: 400px;
+  width: 450px;
   height: 500px;
   border-radius: 5px;
   margin-right: 100px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.who-container{
+  align-items: center;
+}
+
+.quienes-somos {
+  display: flex;
+  width: 1000px; 
+  height: 500px; 
+  flex-direction: column;
+  font-size: x-large;
+  gap: 20;
+  margin-left: 450px;
+  margin-top: 5px;
+}
+
+.quienes-somos p {
+  max-width: 100%; /* El texto no superará el ancho del contenedor */
+  margin-top: 2px;
+}
+
+.quienes-somos h3{
+  text-align: center;
+}
+
+/*Hr's*/
+.hrGlobal{
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+#hrSup{
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#hrBaj{
+  width: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /*Estilos del footer*/
@@ -104,4 +163,3 @@ footer {
   transform: scale(1.2);
   transition: all 0.3s;
 }
-
