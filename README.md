@@ -28,6 +28,6 @@ Contribuciones
 ¡Las contribuciones son bienvenidas! Si desea contribuir al desarrollo de la plataforma, consulte nuestras pautas de contribución para obtener más detalles.
 Licencia
 
-Este proyecto está bajo la licencia [nombre de la licencia]. Consulte el archivo LICENSE para obtener más detalles.
+
 
 ¡Gracias por visitar nuestra plataforma de herrería en línea!
