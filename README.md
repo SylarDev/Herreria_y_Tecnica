@@ -1,4 +1,4 @@
-Web de Herrería
+Web de Herrería y Técnica
 
 Este proyecto es una plataforma web dedicada al arte de la herrería, donde la creatividad se combina con la destreza artesanal para crear piezas únicas y duraderas. La aplicación web utiliza una variedad de tecnologías para proporcionar una experiencia envolvente y funcional.
 Tecnologías Utilizadas
