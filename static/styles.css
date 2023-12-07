@@ -6,7 +6,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  background-color:blueviolet;
+  
 }
 /*Estilos del encabezado y navegacion*/
 
@@ -84,7 +84,6 @@ header {
 
 #product-title {
   text-align: center;
-  
 }
 .door-services p {
   margin: 0;
@@ -120,11 +119,11 @@ header {
 }
 
 .quienes-somos p {
-  max-width: 100%; /* El texto no superará el ancho del contenedor */
+  max-width: 100%; 
   margin-top: 2px;
 }
 
-.quienes-somos h3{
+.quienes-somos p, h3{
   text-align: center;
 }
 
@@ -145,6 +144,70 @@ header {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.ideas h3{
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 50px;
+  font-size: xx-large;
+}
+/*Estilos del formulario de contacto*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EFEFEF;
+  padding: 20px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.formulario legend {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #F4A261;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.formulario label {
+  color: #333;
+  margin-top: 10px;
+  font-size: x-large;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea,
+.formulario input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; 
+}
+
+.formulario input[type="button"] {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.formulario input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+
 
 /*Estilos del footer*/
 footer {
