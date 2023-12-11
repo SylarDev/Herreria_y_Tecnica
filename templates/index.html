@@ -24,10 +24,10 @@
             <a href="{{url_for('index')}}"><img src="{{url_for('static', filename='icons/1.png')}}" alt="Logo"></a>
         </div>
         <nav class="navbar-container">
-            <li class="navbar-item"><a href="#">Inicio</a></li>
             <li class="navbar-item"><a href="#hrSup">Servicios</a></li>
             <li class="navbar-item"><a href="#quienes-somos">Quienes sómos</a></li>
-            <li class="navbar-item"><a href="#formularioContacto">Contacto</a></li>
+            <li class="navbar-item"><a href="#ideas">Contacto</a></li>
+
         </nav>
     </header>
 
@@ -89,7 +89,7 @@
     <hr id="hrSup">
     <p id="servicios" class="ns">Nuestros servicios</p>
     <div class="services-container">
-        
+
         <div class="door-services">
             <div class="pServices">
                 <h3 id="product-title">Puertas granero</h3>
@@ -153,7 +153,7 @@
                 </p>
             </div>
 
-            <img src="{{ url_for('static', filename='img/puerta-reja.jpg') }}" alt="Puerta reja" >
+            <img src="{{ url_for('static', filename='img/puerta-reja.jpg') }}" alt="Puerta reja">
         </div>
 
     </div>
@@ -177,52 +177,64 @@
                     garantizar que nuestras operaciones sigan siendo tan vanguardistas como nuestros diseños.
                     Únete a nosotros en el viaje hacia la seguridad y la elegancia. En Herreria y Técnica, no solo
                     construimos tus diseños, creamos experiencias que resisten la prueba del tiempo.
-                    Nos llena de emoción tener la oportunidad de colaborar contigo y materializar tus ideas 
-                    en materia de seguridad y estilo. ¡Te damos la más cordial bienvenida a 
+                    Nos llena de emoción tener la oportunidad de colaborar contigo y materializar tus ideas
+                    en materia de seguridad y estilo. ¡Te damos la más cordial bienvenida a
                     la familia de Herrería y Técnica!
                 </p>
             </div>
         </div>
     </div>
     <hr id="hrBaj">
-    <div class="ideas">
-        <h3>Cuentanos tus ideas:</h3>
+    <div id="ideas"></div>
+    <div  class="contac-paragraph">
+        <div class="ideas">
+            <h3>Cuentanos tus ideas:</h3>
+        </div>
+        <p>
+            ¡Estamos emocionados por conocer tus ideas y proyectos! En nuestra web,
+            te invitamos a ponerte en contacto con nosotros para compartir tus visiones y objetivos.
+            Ya sea que desees discutir tu proyecto, solicitar un presupuesto directamente, o incluso
+            organizar una reunión para visitarte en la comodidad de tu hogar, estamos aquí para escucharte.
+            Estamos comprometidos a brindarte soluciones
+            personalizadas y a hacer realidad tus ideas. ¡Esperamos con ansias trabajar contigo para hacer
+            que tus proyectos despeguen!
+        </p>
     </div>
     <div id="formularioContacto"></div>
     <div class="formulario">
 
         <form name="contacForm" action="https://formsubmit.co/herreriaytecnica83@gmail.com" method="POST">
-          <fieldset class="form-container">
-            <legend>Contacto</legend>
-            <p>
-              <label class="formTitle" for="nombre">Nombre<span class="obligatorio">*</span>:</label>
-              <input type="text" name="nombre" id="nombre" size="30" maxlength="50" placeholder="Nombre" required>
-            </p>
-            <p>
-              <label class="formTitle" for="apellido">Apellido:</label>
-              <input type="text" name="Apellido" id="apellido" placeholder="Apellido">
-            </p>
-            <p>
-              <label class="formTitle" for="telefono">Telefono<span class="obligatorio">*</span>:</label>
-              <input type="text" name="Telefono" id="telefono" placeholder="telefono" required>
-            <p>
-              <label class="formTitle" for="email">Email<span class="obligatorio">*</span>:</label>
-              <input type="email" name="email" id="email" placeholder="Email" required>
-            </p>
-    
-            <p>
-              <label class="formTitle" for="mensaje">Mensaje<span class="obligatorio">*</span>:</label><br>
-              <textarea placeholder="Tu mensaje.." rows="5" cols="25" name="Mensaje" required></textarea>
-            </p>
-            
-            <button type="submit">Enviar</button>
-            <p class="aviso">
-              <span class="obligatorio"> * </span>los campos son obligatorios.
-            </p>
-          </fieldset>
+            <fieldset class="form-container">
+                <legend>Contacto</legend>
+                <p>
+                    <label class="formTitle" for="nombre">Nombre<span class="obligatorio">*</span>:</label>
+                    <input type="text" name="nombre" id="nombre" size="30" maxlength="50" placeholder="Nombre" required>
+                </p>
+                <p>
+                    <label class="formTitle" for="apellido">Apellido:</label>
+                    <input type="text" name="Apellido" id="apellido" placeholder="Apellido">
+                </p>
+                <p>
+                    <label class="formTitle" for="telefono">Telefono<span class="obligatorio">*</span>:</label>
+                    <input type="text" name="Telefono" id="telefono" placeholder="telefono" required>
+                <p>
+                    <label class="formTitle" for="email">Email<span class="obligatorio">*</span>:</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </p>
+
+                <p>
+                    <label class="formTitle" for="mensaje">Mensaje<span class="obligatorio">*</span>:</label><br>
+                    <textarea placeholder="Tu mensaje.." rows="5" cols="25" name="Mensaje" required></textarea>
+                </p>
+
+                <button type="submit">Enviar</button>
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p>
+            </fieldset>
         </form>
-    
-      </div>
+
+    </div>
     <footer>
         <div class="footer-container">
             <h5>
